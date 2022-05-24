@@ -1,18 +1,22 @@
 algoritmo "atividade"
 var
 numero1, numero2 : real
-
+opcao : inteiro
 //funcao soma
 funcao f_soma (num1, num2 : real) : real
 var
+resultado : real
 inicio
+resultado <- num1 + num2
 retorne resultado
 fimfuncao
 
 //funcao subtracao
 funcao f_subtracao (num1, num2 : real) : real
 var
+resultado : real
 inicio
+resultado <- num1 - num2
 retorne resultado
 fimfuncao
 
@@ -31,27 +35,27 @@ retorne resultado
 fimfuncao
 
 inicio
-enquanto (opcao)
+enquanto (opcao <> 9) faca
    escreval("1 - Soma")
    escreval("2 - Subtracao")
    escreval("3 - Divisao")
    escreval("4 - Multiplicacao")
    escreval("9 - Sair")
-   escreva("Insira o comando")
+   escreva("Insira o comando: ")
    leia(opcao)
-   escreva("Insira número 1: ")
+   escreva("Insira numero 1: ")
    leia(numero1)
-   escreva("Insira número 2: ")
+   escreva("Insira numero 2: ")
    leia(numero2)
-   escolha
+   escolha (opcao)
       caso 1
-         escreval("A soma dos dois número é: ", f_soma(numero1, numero2))
+         escreval("A soma dos dois numeros: ", f_soma(numero1, numero2))
       caso 2
-         escreval("A subtracao dois número é: ", f_subtracao(numero1, numero2))
+         escreval("A subtracao dois numeros: ", f_subtracao(numero1, numero2))
       caso 3
-         escreval("A divisao dos dois número é: ", f_divisao(numero1, numero2))
+         escreval("A divisao dos dois numeros: ", f_divisao(numero1, numero2))
       caso 4
-         escreval("A multiplicacao dos dois número é: ", f_multiplicacao(numero1, numero2))
+         escreval("A multiplicacao dos dois numeros: ", f_multiplicacao(numero1, numero2))
    fimescolha
 fimenquanto
 fimalgoritmo
