@@ -23,14 +23,20 @@ fimfuncao
 //funcao divisao
 funcao f_divisao (num1, num2 : real) : real
 var
+resultado : real
 inicio
-retorne resultado
+se (num2 <> 0) entao
+ resultado <- num1 / num2
+ retorne resultado
+fimse
 fimfuncao
 
 //funcao multiplicacao
 funcao f_multiplicacao (num1, num2 : real) : real
 var
+resultado : real
 inicio
+resultado <- num1 * num2
 retorne resultado
 fimfuncao
 
@@ -53,7 +59,11 @@ enquanto (opcao <> 9) faca
       caso 2
          escreval("A subtracao dois numeros: ", f_subtracao(numero1, numero2))
       caso 3
-         escreval("A divisao dos dois numeros: ", f_divisao(numero1, numero2))
+         se (numero2 <> 0) entao
+            escreval("A divisao dos dois numeros: ", f_divisao(numero1, numero2))
+            senao
+               escreval("A divisao indicada é inválida")
+         fimse
       caso 4
          escreval("A multiplicacao dos dois numeros: ", f_multiplicacao(numero1, numero2))
    fimescolha
