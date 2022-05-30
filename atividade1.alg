@@ -49,6 +49,9 @@ enquanto (opcao <> 9) faca
    escreval("9 - Sair")
    escreva("Insira o comando: ")
    leia(opcao)
+   se (opcao = 9) entao
+      interrompa
+   fimse
    escreva("Insira numero 1: ")
    leia(numero1)
    escreva("Insira numero 2: ")
