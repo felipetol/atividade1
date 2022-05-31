@@ -1,4 +1,4 @@
-algoritmo "atividade"
+algoritmo "Trabalho1"
 var
 numero1, numero2 : real
 opcao : inteiro
