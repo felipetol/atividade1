@@ -1,4 +1,4 @@
-algoritmo "Atividade_2"
+algoritmo "Trabalho_2"
 var
 num : vetor[0..9] de inteiro
 i : inteiro
